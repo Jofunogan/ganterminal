@@ -20,7 +20,7 @@ pkg install -y nodejs git
 
 # 4. clonar novo projeto
 echo "📥 Baixando GanTerminal..."
-git clone https://github.com/SEU_USUARIO/ganterminal-simp-v2.git "$INSTALL_DIR"
+git clone https://github.com/Jofunogan/GanTerminal.git "$INSTALL_DIR"
 
 cd "$INSTALL_DIR"
 
