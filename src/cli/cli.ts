@@ -8,20 +8,23 @@ const rl = readline.createInterface({
 })
 
 console.log("🚀 GanTerminal iniciado")
-console.log("Digite seus comandos abaixo:\n")
+console.log("Digite 'help' para ver comandos\n")
 
 rl.prompt()
 
 rl.on("line", (input) => {
-  const result = run(input)
+  const result = run(input.trim())
 
-  console.log("\n📦 Resultado:")
+  if (result === "__exit__") {
+    rl.close()
+    return
+  }
+
   console.log(result)
-
   rl.prompt()
 })
 
 rl.on("close", () => {
-  console.log("\n👋 Encerrando GanTerminal...")
+  console.log("👋 Saindo do GanTerminal...")
   process.exit(0)
 })
