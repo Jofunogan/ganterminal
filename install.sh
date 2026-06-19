@@ -33,3 +33,8 @@ echo "✅ Instalação concluída!"
 echo ""
 echo "👉 Para iniciar:"
 echo "cd $INSTALL_DIR && node src/index.js"
+echo ""
+echo "🔄 Criando comando de update..."
+
+cp update.sh "$INSTALL_DIR/update.sh"
+chmod +x "$INSTALL_DIR/update.sh"
